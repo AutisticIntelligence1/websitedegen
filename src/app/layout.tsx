@@ -1,19 +1,19 @@
-import type { Metadata } from 'next';
-import './globals.css';
+import './globals.css'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Degen Capital',
   description: 'Community-Driven Crypto-fund',
-};
+}
 
 export default function RootLayout({
                                      children,
                                    }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
       <html lang="en">
-      <body className="bg-zinc-900">{children}</body>
+      <body>{children}</body>
       </html>
-  );
+  )
 }

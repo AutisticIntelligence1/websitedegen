@@ -45,7 +45,8 @@ const CountdownTimer = () => {
   );
 };
 
-const TaxInfoModal = ({ onClose }: { onClose: () => void }) => (
+// Helper Components
+const TaxInfoModal = ({ onClose }) => (
     <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
       <div className="bg-zinc-800 p-6 rounded-lg max-w-md w-full mx-4">
         <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
@@ -98,17 +99,7 @@ const TaxInfoModal = ({ onClose }: { onClose: () => void }) => (
     </div>
 );
 
-const BenefitCard = ({
-                       icon,
-                       title,
-                       description,
-                       footer
-                     }: {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  footer: string;
-}) => (
+const BenefitCard = ({ icon, title, description, footer }) => (
     <div className="p-6 bg-zinc-800/30 rounded-lg border border-emerald-400/20 hover:border-emerald-400/40 transition-all hover:scale-105 group">
       <div className="text-emerald-400 w-8 h-8 mb-4 group-hover:scale-110 transition-transform">
         {icon}
@@ -119,17 +110,7 @@ const BenefitCard = ({
     </div>
 );
 
-const Stat = ({
-                icon,
-                value,
-                label,
-                additionalContent
-              }: {
-  icon: React.ReactNode;
-  value: string;
-  label: string;
-  additionalContent?: React.ReactNode;
-}) => (
+const Stat = ({ icon, value, label, additionalContent }) => (
     <div className="p-4 bg-zinc-800/50 rounded-lg hover:bg-zinc-800 transition-colors">
       <div className="flex items-center gap-2 text-emerald-400 mb-2">{icon}</div>
       <div className="text-2xl font-bold mb-1">{value}</div>
@@ -138,15 +119,7 @@ const Stat = ({
     </div>
 );
 
-const Feature = ({
-                   icon,
-                   title,
-                   description
-                 }: {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-}) => (
+const Feature = ({ icon, title, description }) => (
     <div className="p-4 bg-zinc-800/30 rounded-lg hover:bg-zinc-800/50 transition-colors">
       <div className="flex items-center gap-3">
         <div className="text-emerald-400">{icon}</div>
@@ -158,15 +131,7 @@ const Feature = ({
     </div>
 );
 
-const Step = ({
-                number,
-                title,
-                description
-              }: {
-  number: string;
-  title: string;
-  description: string;
-}) => (
+const Step = ({ number, title, description }) => (
     <div className="flex items-start gap-4">
       <div className="text-emerald-400 font-bold">{number}</div>
       <div>
@@ -176,13 +141,7 @@ const Step = ({
     </div>
 );
 
-const TaxBarSimple = ({
-                        label,
-                        value
-                      }: {
-  label: string;
-  value: string;
-}) => (
+const TaxBarSimple = ({ label, value }) => (
     <div className="flex justify-between items-center text-sm">
       <span className="text-zinc-400">{label}</span>
       <span className="text-emerald-400">{value}</span>
