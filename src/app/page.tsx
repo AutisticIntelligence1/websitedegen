@@ -1,7 +1,26 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, BarChart3, Lock, Users, Wallet, Rocket, TrendingUp, ChartBar, Star, Shield, Clock, Target, Globe, Ship, Send, Sun, Moon, Info } from 'lucide-react';
+import {
+  ArrowRight,
+  BarChart,
+  Lock,
+  Users,
+  Wallet,
+  Rocket,
+  TrendingUp,
+  Star,
+  Shield,
+  Clock,
+  Target,
+  Globe,
+  Ship,
+  Send,
+  Sun,
+  Moon,
+  Info,
+} from 'lucide-react';
+
 
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -50,7 +69,7 @@ const TaxInfoModal = ({ onClose }) => (
     <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
       <div className="bg-zinc-800 p-6 rounded-lg max-w-md w-full mx-4">
         <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-          <BarChart3 className="text-emerald-400" />
+          <BarChart className="text-emerald-400" />
           Transaction Tax Structure
         </h3>
         <div className="space-y-4">
@@ -317,7 +336,7 @@ const DegenCapital = () => {
             <Stat icon={<Users />} value="1,000,000" label="Max Supply" />
             <div onClick={() => setShowTaxInfo(true)} className="cursor-pointer">
               <Stat
-                  icon={<ChartBar />}
+                  icon={<BarChart />}
                   value="4% / 4%"
                   label="Buy/Sell Tax"
                   additionalContent={
@@ -359,7 +378,7 @@ const DegenCapital = () => {
 
             <div className="space-y-6">
               <h3 className="text-xl font-semibold flex items-center gap-2">
-                <BarChart3 className="text-emerald-400" /> Tax Structure
+                <BarChart className="text-emerald-400" /> Tax Structure
               </h3>
               <div className="space-y-4">
                 <div className="p-4 bg-zinc-800/50 rounded-lg">
@@ -393,3 +412,4 @@ const DegenCapital = () => {
 };
 
 export default DegenCapital;
+
