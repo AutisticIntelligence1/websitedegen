@@ -1,12 +1,25 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'standalone',
-    poweredByHeader: false,
-    typescript: {
-        ignoreBuildErrors: true
+    reactStrictMode: true,
+    swcMinify: true,
+    webpack: (config, { dev, isServer }) => {
+        // Webpack 5 polyfill voor punycode
+        config.resolve.fallback = {
+            ...config.resolve.fallback,
+            punycode: false
+        };
+
+        // Disable cache in development
+        if (dev) {
+            config.cache = false;
+        }
+
+        return config;
     },
-    eslint: {
-        ignoreDuringBuilds: true
+    experimental: {
+        // Disable webpack cache
+        optimizeFonts: false,
+        enableUndici: true
     }
 }
 
