@@ -3,7 +3,7 @@ const nextConfig = {
     reactStrictMode: true,
     swcMinify: true,
     webpack: (config, { dev, isServer }) => {
-        // Webpack 5 polyfill voor punycode
+        // Webpack 5 polyfill for punycode
         config.resolve.fallback = {
             ...config.resolve.fallback,
             punycode: false
@@ -16,11 +16,6 @@ const nextConfig = {
 
         return config;
     },
-    experimental: {
-        // Disable webpack cache
-        optimizeFonts: false,
-        enableUndici: true
-    }
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;
